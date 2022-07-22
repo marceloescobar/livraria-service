@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">titulo</th>
+            <th scope="col">autor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let livro of livros">
+            <td>{{ livro.id }}</td>
+            <td>{{ livro.titulo }}</td>
+            <td>{{ livro.autor }}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
