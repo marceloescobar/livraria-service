@@ -8,11 +8,14 @@ import javax.persistence.Table;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.Tolerate;
 
 @Data
 @Builder
 @Entity
-@Table(name="livro")
+@Table(name = "livro")
 public class Livro {
 
 	@Id
@@ -20,4 +23,7 @@ public class Livro {
 	private Long id;
 	private String titulo;
 	private String autor;
+
+	@Tolerate
+	public Livro() {}
 }

@@ -27,7 +27,7 @@ public class LivroController {
 		this.livroService = livroService;
 	}
 
-	@GetMapping("/livros/")
+	@GetMapping("/livros")
 	public List<Livro> getLivros() {
 		return livroService.obterTodos();
 	}
@@ -39,7 +39,7 @@ public class LivroController {
 
 	}
 
-	@PostMapping("/livros/")
+	@PostMapping("/livros")
 	public ResponseEntity<Livro> salvar(@RequestBody @Valid LivroRequest livroRequest) {
 
 		return new ResponseEntity<>(livroService.salvar(this.converter(livroRequest)),HttpStatus.CREATED);

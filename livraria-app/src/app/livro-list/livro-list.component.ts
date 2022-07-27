@@ -9,7 +9,7 @@ import { LivroService } from '../livro.service';
 })
 export class LivroListComponent implements OnInit {
 
-  livros: Livro[];
+  livros: Livro[] = [];
 
   constructor(private livroService: LivroService) {
   }
